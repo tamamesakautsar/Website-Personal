@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anniversary 3 Years Tamam & Dafina</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="hedlinecontainer">
+    <div id="shine">Happy Anniversary Sayangg 😙💗</div>
+  </div>
+    <div class="fade-slide active">
+      <img src="gambar1.jpg" alt="Gambar 1">
+      <p>Moment spesial kita 😘</p>
+    </div>
+    <div class="fade-slide">
+      <img src="gambar2.jpg" alt="Gambar 2">
+      <p>Waktu jalan-jalan bareng 🚗</p>
+    </div>
+    <div class="fade-slide">
+      <img src="gambar3.jpg" alt="Gambar 3">
+      <p>Kenangan lucu & manis 🍼</p>
+    </div>
+    <div class="fade-slide">
+      <img src="gambar4.jpg" alt="Gambar 4">
+      <p>Petualangan kita di alam 🌲</p>
+    </div>
+    <div class="fade-slide">
+      <img src="gambar5.jpg" alt="Gambar 5">
+      <p>Si cantik kesayanganku 💕</p>
+    </div>
+  </div>
+
+  <!-- Musik romantis -->
+  <audio autoplay loop>
+    <source src="musik-romantis.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung audio.
+  </audio>
+
+  <!-- Script untuk galeri -->
+  <script>
+    const slides = document.querySelectorAll('.fade-slide');
+    let current = 0;
+
+    function showNextSlide() {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }
+
+    setInterval(showNextSlide, 4000);
+  </script>
+
+</body>
+</html>
